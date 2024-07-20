@@ -10,15 +10,19 @@ function getRandom(max) {
 function checkGuess(guess, answer) {
         if (guess === answer) {
             console.log("You got it!");
+            return true;
         }
         else if (GUESSES.includes(guess)) {
             console.log("You already guessed that!");
+            return false;
         }
         else if (guess > answer) {
             console.log("Lower!");
+            return false;
         }
         else {
             console.log("Higher!");
+            return false;
         }
     }
 
@@ -37,4 +41,7 @@ do {
     guess = Number(guess);
 }
 while (isNaN(guess))
-checkGuess(guess);
+do {
+    isCorrect = checkGuess(guess);
+}
+while (isCorrect != true)
