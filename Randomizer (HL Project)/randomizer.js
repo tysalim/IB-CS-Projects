@@ -8,10 +8,8 @@ function getRandom(max) {
 }
 
 function checkGuess(guess, answer) {
-    while (true) {
         if (guess === answer) {
             console.log("You got it!");
-            break;
         }
         else if (GUESSES.includes(guess)) {
             console.log("You already guessed that!");
@@ -23,7 +21,7 @@ function checkGuess(guess, answer) {
             console.log("Higher!");
         }
     }
-}
+
 
 
 console.log("Guess Two Numbers!");
