@@ -39,9 +39,6 @@ console.log("Random number generated.");
 do {
     guess = prompt("Input your guess here: ");
     guess = Number(guess);
+    isCorrect = checkGuess(guess, randomNum);
 }
-while (isNaN(guess))
-do {
-    isCorrect = checkGuess(guess);
-}
-while (isCorrect != true)
+while (isNaN(guess) || isCorrect != true)
