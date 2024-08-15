@@ -24,7 +24,6 @@ input {
 }
 
 .btn-primary {
-    border: 2px solid rgb(0, 0, 0);
     display: block;
 }
 
@@ -41,4 +40,8 @@ a {
 .inline-label {
     display: inline-block;
     font-weight: bold;
+}
+
+.form-control {
+    width: 60%;
 }
