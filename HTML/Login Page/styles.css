@@ -30,7 +30,6 @@ input[type="submit"] {
 
 input:hover[type="submit"] {
     background-color: black;
-    color: white;
 }
 
 a {
