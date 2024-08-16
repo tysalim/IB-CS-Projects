@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
         <title>Schoology Login</title>
         <link rel="icon" type="image/x-icon" href="https://companieslogo.com/img/orig/PWSC.D-05b9738d.png?t=1720244493">
-    <h1 id="title">Schoology Login</h1>
+    <h1>Schoology Login</h1>
     <form name="myform">
       <label class="form-label">Name:</label> 
       <input type="text" placeholder="Username" class="form-control" id="user">
@@ -19,8 +19,26 @@
     <br>
     <p>No account yet? </p><a href="https://xs.schoology.com/login">Sign up here</a>
 
-    <input class="btn btn-primary" type="submit" value="Submit" onclick="combo()" />
-    <p id="output"></p>
+
+    <input class="btn btn-primary" type="submit" value="Submit" onclick="combo()" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="title"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="alert">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
     </body>

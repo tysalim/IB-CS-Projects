@@ -1,0 +1,19 @@
+body {
+    display: flex;
+}
+a {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    margin-top: 5px;
+}
+
+
+

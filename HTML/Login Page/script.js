@@ -6,20 +6,21 @@ function combo() {
     let y = document.getElementById("pwd").value.trim();
     let a = document.getElementById("title");
     let b = document.getElementById("alert");
-    let btnColor = document.getElementById("button").bgcolor;
+    let btnClass = document.getElementById("close-button").className;
 
     for (let i = 0; i < combos.length; i++) {
         if (combos[i][0] == x) {
             if (combos[i][1] == y) {
                 a.innerHTML = "Success!";
                 b.innerHTML = "You have successfully logged in!";
+                btnClass += 'success-button';
                 document.myform.reset();
                 return 0;
             }
             else {
                 a.innerHTML = "Failure!";
                 b.innerHTML = "Incorrect password!";
-                btnColor = "red";
+                btnClass += 'failure_button';
                 document.myform.reset();
                 return 0;
             }
@@ -27,7 +28,7 @@ function combo() {
     }
     a.innerHTML = "Failure!";
     b.innerHTML = "Username doesn't exist!";
-    btnColor = "red";
+    btnClass += "failure-button";
     document.myform.reset();
 }
 
