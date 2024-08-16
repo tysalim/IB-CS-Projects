@@ -4,22 +4,30 @@ combos = [["joe", "hi"], ["tyler", "bye"], ["lance", "cs"], ["david", "chicken"]
 function combo() {
     let x = document.getElementById("user").value.trim();
     let y = document.getElementById("pwd").value.trim();
+    let a = document.getElementById("title");
+    let b = document.getElementById("alert");
+    let btnColor = document.getElementById("button").bgcolor;
 
     for (let i = 0; i < combos.length; i++) {
         if (combos[i][0] == x) {
             if (combos[i][1] == y) {
-                alert("Correct password! You have successfully logged in!");
+                a.innerHTML = "Success!";
+                b.innerHTML = "You have successfully logged in!";
                 document.myform.reset();
                 return 0;
             }
             else {
-                alert("Incorrect password!");
+                a.innerHTML = "Failure!";
+                b.innerHTML = "Incorrect password!";
+                btnColor = "red";
                 document.myform.reset();
                 return 0;
             }
         }
     }
-    alert("Username doesn't exist!");
+    a.innerHTML = "Failure!";
+    b.innerHTML = "Username doesn't exist!";
+    btnColor = "red";
     document.myform.reset();
 }
 

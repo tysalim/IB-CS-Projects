@@ -45,3 +45,13 @@ a {
 .form-control {
     width: 40%;
 }
+
+.failure-button {
+    background-color: red;
+    border: none;
+}
+
+.success-button {
+    background-color: red;
+    border: none;
+}
